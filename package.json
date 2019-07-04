@@ -4,7 +4,9 @@
   "description": "Pixabay API client wrapper",
   "main": "src/index.js",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -46,7 +48,8 @@
     "lodash.assign": "~4.0.3",
     "lodash.omit": "~4.0.2",
     "q": "~2.0.3",
-    "superagent": "~1.2.0"
+    "superagent": "~1.2.0",
+    "snyk": "^1.189.0"
   },
   "browserify": {
     "transform": [
@@ -55,5 +58,6 @@
   },
   "jshintConfig": {
     "extends": "./node_modules/jsgreat/es6/.jshintrc"
-  }
+  },
+  "snyk": true
 }
